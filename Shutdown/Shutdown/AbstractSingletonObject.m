@@ -50,7 +50,6 @@ static NSMutableDictionary *singletonObjects;
 	//When the objects were added to the dict, they received a retain message and since we override
 	//-retain to do nothing, the objects still have a retain count of 1.
 	//That's why all the objects will be released.
-	[dict release];
 }
 
 //Used by +alloc to set the _isInitialized flag.
@@ -65,7 +64,6 @@ static NSMutableDictionary *singletonObjects;
 	id object = [singletonObjects objectForKey:class];
     
 	if (object || _isInitialized) {
-		[self release];
 		NSLog(@"Initializing an object twice is not a very good idea...");
 		[self doesNotRecognizeSelector:_cmd];
 		return [[self class] sharedInstance];
@@ -106,7 +104,6 @@ static NSMutableDictionary *singletonObjects;
 
 //Init should never be called!
 -(id)init {
-	[self release];	//In most cases does nothing.
 	NSLog(@"An attempt to initialize a new %@ singleton object has been made. "
 		  @"Don't do that! It's not healthy!", NSStringFromClass([self class]));
 	[self doesNotRecognizeSelector:_cmd];
@@ -117,7 +114,6 @@ static NSMutableDictionary *singletonObjects;
 -(void)dealloc {
 	if (!singletonObjects) {
 		[self destroy];
-		[super dealloc];
 	}
 }
 

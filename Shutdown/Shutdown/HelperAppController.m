@@ -49,12 +49,10 @@
 	ProcessSerialNumber PSN = { kNoProcess, kNoProcess };
     
 	while (GetNextProcess(&PSN) == noErr) {
-		NSDictionary *infoDict = (NSDictionary *)ProcessInformationCopyDictionary(&PSN, kProcessDictionaryIncludeAllInformationMask);
+		NSDictionary *infoDict = (__bridge NSDictionary *)ProcessInformationCopyDictionary(&PSN, kProcessDictionaryIncludeAllInformationMask);
 		if(infoDict) {
 			NSString *bundleID = [infoDict objectForKey:(NSString *)kCFBundleIdentifierKey];
 			isRunning = bundleID && [bundleID isEqualToString:theBundleIdentifier];
-			CFMakeCollectable(infoDict);
-			[infoDict release];
 		}
 		if (isRunning)
 			break;

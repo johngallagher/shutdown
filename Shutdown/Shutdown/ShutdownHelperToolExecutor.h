@@ -3,12 +3,12 @@
 //
 //#include "BetterAuthorizationSampleLib.h"
 
-#include "SampleCommon.h"
+//#include "SampleCommon.h"
 
 /////////////////////////////////////////////////////////////////
 #pragma mark ***** Globals
 
-static AuthorizationRef gAuth;
+//static AuthorizationRef gAuth;
 
 /////////////////////////////////////////////////////////////////
 #pragma mark ***** Objective-C Wrapper

@@ -116,31 +116,32 @@
 
 @end
 
-int main(int argc, char *argv[]) {
-    OSStatus    junk;
-    
-    // Create the AuthorizationRef that we'll use through this application.  We ignore 
-    // any error from this.  A failure from AuthorizationCreate is very unusual, and if it 
-    // happens there's no way to recover; Authorization Services just won't work.
-    
-    junk = AuthorizationCreate(NULL, NULL, kAuthorizationFlagDefaults, &gAuth);
-    assert(junk == noErr);
-    assert( (junk == noErr) == (gAuth != NULL) );
-    
-	// For each of our commands, check to see if a right specification exists and, if not,
-    // create it.
-    //
-    // The last parameter is the name of a ".strings" file that contains the localised prompts 
-    // for any custom rights that we use.
-    
-	BASSetDefaultRules(
-                       gAuth, 
-                       kSampleCommandSet, 
-                       CFBundleGetIdentifier(CFBundleGetMainBundle()), 
-                       CFSTR("SampleAuthorizationPrompts")
-                       );
-    
-    // And now, the miracle that is Cocoa...
-    
-    return NSApplicationMain(argc,  (const char **) argv);
-}
+// Commented out because we don't want to rely on the authorization helper stuff.
+//int main(int argc, char *argv[]) {
+//    OSStatus    junk;
+//    
+//    // Create the AuthorizationRef that we'll use through this application.  We ignore 
+//    // any error from this.  A failure from AuthorizationCreate is very unusual, and if it 
+//    // happens there's no way to recover; Authorization Services just won't work.
+//    
+//    junk = AuthorizationCreate(NULL, NULL, kAuthorizationFlagDefaults, &gAuth);
+//    assert(junk == noErr);
+//    assert( (junk == noErr) == (gAuth != NULL) );
+//    
+//	// For each of our commands, check to see if a right specification exists and, if not,
+//    // create it.
+//    //
+//    // The last parameter is the name of a ".strings" file that contains the localised prompts 
+//    // for any custom rights that we use.
+//    
+//	BASSetDefaultRules(
+//                       gAuth, 
+//                       kSampleCommandSet, 
+//                       CFBundleGetIdentifier(CFBundleGetMainBundle()), 
+//                       CFSTR("SampleAuthorizationPrompts")
+//                       );
+//    
+//    // And now, the miracle that is Cocoa...
+//    
+//    return NSApplicationMain(argc,  (const char **) argv);
+//}
