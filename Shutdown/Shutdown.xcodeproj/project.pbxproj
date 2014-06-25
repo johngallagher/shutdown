@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		079D06F067D1497D81861C30 /* libPods-Shutdown Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751EE0E37A3048EAAE500C11 /* libPods-Shutdown Tests.a */; };
+		554D9EA1C85E4266AC5C50EF /* libPods-Shutdown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5600CCDBF36F4B1884460758 /* libPods-Shutdown.a */; };
+		6700463E1957888800DE3446 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6700463D1957888800DE3446 /* XCTest.framework */; };
+		670046441957888800DE3446 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 670046421957888800DE3446 /* InfoPlist.strings */; };
+		670046461957888800DE3446 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 670046451957888800DE3446 /* MathSpec.m */; };
+		67DC64421957777D00D87BB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64411957777D00D87BB4 /* Cocoa.framework */; };
+		67DC64441957777D00D87BB4 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64431957777D00D87BB4 /* PreferencePanes.framework */; };
+		67DC644E1957777D00D87BB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67DC644C1957777D00D87BB4 /* InfoPlist.strings */; };
+		67DC64521957777D00D87BB4 /* Shutdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DC64511957777D00D87BB4 /* Shutdown.m */; };
+		67DC64541957777D00D87BB4 /* Shutdown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 67DC64531957777D00D87BB4 /* Shutdown.tiff */; };
+		67DC64571957777D00D87BB4 /* Shutdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DC64551957777D00D87BB4 /* Shutdown.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		670046481957888800DE3446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67DC64341957777D00D87BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67DC643D1957777D00D87BB4;
+			remoteInfo = Shutdown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EFDB89990FC4ED4BFA78D54 /* Pods-Shutdown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shutdown.xcconfig"; path = "Pods/Pods-Shutdown.xcconfig"; sourceTree = "<group>"; };
+		5600CCDBF36F4B1884460758 /* libPods-Shutdown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shutdown.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6700463C1957888800DE3446 /* Shutdown Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shutdown Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6700463D1957888800DE3446 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		670046411957888800DE3446 /* Shutdown Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shutdown Tests-Info.plist"; sourceTree = "<group>"; };
+		670046431957888800DE3446 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		670046451957888800DE3446 /* MathSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
+		670046471957888800DE3446 /* Shutdown Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shutdown Tests-Prefix.pch"; sourceTree = "<group>"; };
+		67DC643E1957777D00D87BB4 /* Shutdown.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shutdown.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DC64411957777D00D87BB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		67DC64431957777D00D87BB4 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		67DC64461957777D00D87BB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		67DC64471957777D00D87BB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		67DC64481957777D00D87BB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67DC644B1957777D00D87BB4 /* Shutdown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shutdown-Info.plist"; sourceTree = "<group>"; };
+		67DC644D1957777D00D87BB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67DC644F1957777D00D87BB4 /* Shutdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shutdown-Prefix.pch"; sourceTree = "<group>"; };
+		67DC64501957777D00D87BB4 /* Shutdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shutdown.h; sourceTree = "<group>"; };
+		67DC64511957777D00D87BB4 /* Shutdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shutdown.m; sourceTree = "<group>"; };
+		67DC64531957777D00D87BB4 /* Shutdown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shutdown.tiff; sourceTree = "<group>"; };
+		67DC64561957777D00D87BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Shutdown.xib; sourceTree = "<group>"; };
+		751EE0E37A3048EAAE500C11 /* libPods-Shutdown Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shutdown Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0F96567B6A447EB89EA35F /* Pods-Shutdown Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shutdown Tests.xcconfig"; path = "Pods/Pods-Shutdown Tests.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		670046391957888800DE3446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6700463E1957888800DE3446 /* XCTest.framework in Frameworks */,
+				079D06F067D1497D81861C30 /* libPods-Shutdown Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DC64391957777D00D87BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DC64421957777D00D87BB4 /* Cocoa.framework in Frameworks */,
+				67DC64441957777D00D87BB4 /* PreferencePanes.framework in Frameworks */,
+				554D9EA1C85E4266AC5C50EF /* libPods-Shutdown.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6700463F1957888800DE3446 /* Shutdown Tests */ = {
+			isa = PBXGroup;
+			children = (
+				670046451957888800DE3446 /* MathSpec.m */,
+				670046401957888800DE3446 /* Supporting Files */,
+			);
+			path = "Shutdown Tests";
+			sourceTree = "<group>";
+		};
+		670046401957888800DE3446 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670046411957888800DE3446 /* Shutdown Tests-Info.plist */,
+				670046421957888800DE3446 /* InfoPlist.strings */,
+				670046471957888800DE3446 /* Shutdown Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67DC64331957777D00D87BB4 = {
+			isa = PBXGroup;
+			children = (
+				67DC64491957777D00D87BB4 /* Shutdown */,
+				6700463F1957888800DE3446 /* Shutdown Tests */,
+				67DC64401957777D00D87BB4 /* Frameworks */,
+				67DC643F1957777D00D87BB4 /* Products */,
+				0EFDB89990FC4ED4BFA78D54 /* Pods-Shutdown.xcconfig */,
+				FF0F96567B6A447EB89EA35F /* Pods-Shutdown Tests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		67DC643F1957777D00D87BB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67DC643E1957777D00D87BB4 /* Shutdown.prefPane */,
+				6700463C1957888800DE3446 /* Shutdown Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67DC64401957777D00D87BB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67DC64411957777D00D87BB4 /* Cocoa.framework */,
+				67DC64431957777D00D87BB4 /* PreferencePanes.framework */,
+				6700463D1957888800DE3446 /* XCTest.framework */,
+				67DC64451957777D00D87BB4 /* Other Frameworks */,
+				5600CCDBF36F4B1884460758 /* libPods-Shutdown.a */,
+				751EE0E37A3048EAAE500C11 /* libPods-Shutdown Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67DC64451957777D00D87BB4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67DC64461957777D00D87BB4 /* AppKit.framework */,
+				67DC64471957777D00D87BB4 /* CoreData.framework */,
+				67DC64481957777D00D87BB4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		67DC64491957777D00D87BB4 /* Shutdown */ = {
+			isa = PBXGroup;
+			children = (
+				67DC64501957777D00D87BB4 /* Shutdown.h */,
+				67DC64511957777D00D87BB4 /* Shutdown.m */,
+				67DC64531957777D00D87BB4 /* Shutdown.tiff */,
+				67DC64551957777D00D87BB4 /* Shutdown.xib */,
+				67DC644A1957777D00D87BB4 /* Supporting Files */,
+			);
+			path = Shutdown;
+			sourceTree = "<group>";
+		};
+		67DC644A1957777D00D87BB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67DC644B1957777D00D87BB4 /* Shutdown-Info.plist */,
+				67DC644C1957777D00D87BB4 /* InfoPlist.strings */,
+				67DC644F1957777D00D87BB4 /* Shutdown-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		67DC643A1957777D00D87BB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6700463B1957888800DE3446 /* Shutdown Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6700464C1957888800DE3446 /* Build configuration list for PBXNativeTarget "Shutdown Tests" */;
+			buildPhases = (
+				49869DD2EFA74FDD884CBE78 /* Check Pods Manifest.lock */,
+				670046381957888800DE3446 /* Sources */,
+				670046391957888800DE3446 /* Frameworks */,
+				6700463A1957888800DE3446 /* Resources */,
+				5D17008B67D7471DA089F546 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				670046491957888800DE3446 /* PBXTargetDependency */,
+			);
+			name = "Shutdown Tests";
+			productName = "Shutdown Tests";
+			productReference = 6700463C1957888800DE3446 /* Shutdown Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67DC643D1957777D00D87BB4 /* Shutdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DC645A1957777D00D87BB4 /* Build configuration list for PBXNativeTarget "Shutdown" */;
+			buildPhases = (
+				CBDBDE5F33D64F2982E56029 /* Check Pods Manifest.lock */,
+				67DC64381957777D00D87BB4 /* Sources */,
+				67DC64391957777D00D87BB4 /* Frameworks */,
+				67DC643A1957777D00D87BB4 /* Headers */,
+				67DC643B1957777D00D87BB4 /* Resources */,
+				67DC643C1957777D00D87BB4 /* Rez */,
+				5DA47355202E42B4AA53986D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shutdown;
+			productName = Shutdown;
+			productReference = 67DC643E1957777D00D87BB4 /* Shutdown.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67DC64341957777D00D87BB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Synaptic Mishap";
+				TargetAttributes = {
+					6700463B1957888800DE3446 = {
+						TestTargetID = 67DC643D1957777D00D87BB4;
+					};
+				};
+			};
+			buildConfigurationList = 67DC64371957777D00D87BB4 /* Build configuration list for PBXProject "Shutdown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67DC64331957777D00D87BB4;
+			productRefGroup = 67DC643F1957777D00D87BB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67DC643D1957777D00D87BB4 /* Shutdown */,
+				6700463B1957888800DE3446 /* Shutdown Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6700463A1957888800DE3446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670046441957888800DE3446 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DC643B1957777D00D87BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DC64541957777D00D87BB4 /* Shutdown.tiff in Resources */,
+				67DC64571957777D00D87BB4 /* Shutdown.xib in Resources */,
+				67DC644E1957777D00D87BB4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		67DC643C1957777D00D87BB4 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49869DD2EFA74FDD884CBE78 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D17008B67D7471DA089F546 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Shutdown Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DA47355202E42B4AA53986D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Shutdown-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBDBDE5F33D64F2982E56029 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		670046381957888800DE3446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670046461957888800DE3446 /* MathSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DC64381957777D00D87BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DC64521957777D00D87BB4 /* Shutdown.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		670046491957888800DE3446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67DC643D1957777D00D87BB4 /* Shutdown */;
+			targetProxy = 670046481957888800DE3446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		670046421957888800DE3446 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670046431957888800DE3446 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67DC644C1957777D00D87BB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67DC644D1957777D00D87BB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67DC64551957777D00D87BB4 /* Shutdown.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67DC64561957777D00D87BB4 /* Base */,
+			);
+			name = Shutdown.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6700464A1957888800DE3446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0F96567B6A447EB89EA35F /* Pods-Shutdown Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shutdown Tests/Shutdown Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Shutdown Tests/Shutdown Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6700464B1957888800DE3446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0F96567B6A447EB89EA35F /* Pods-Shutdown Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shutdown Tests/Shutdown Tests-Prefix.pch";
+				INFOPLIST_FILE = "Shutdown Tests/Shutdown Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		67DC64581957777D00D87BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.8;
+			};
+			name = Debug;
+		};
+		67DC64591957777D00D87BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Release;
+		};
+		67DC645B1957777D00D87BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFDB89990FC4ED4BFA78D54 /* Pods-Shutdown.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shutdown/Shutdown-Prefix.pch";
+				INFOPLIST_FILE = "Shutdown/Shutdown-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		67DC645C1957777D00D87BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFDB89990FC4ED4BFA78D54 /* Pods-Shutdown.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shutdown/Shutdown-Prefix.pch";
+				INFOPLIST_FILE = "Shutdown/Shutdown-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6700464C1957888800DE3446 /* Build configuration list for PBXNativeTarget "Shutdown Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6700464A1957888800DE3446 /* Debug */,
+				6700464B1957888800DE3446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DC64371957777D00D87BB4 /* Build configuration list for PBXProject "Shutdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DC64581957777D00D87BB4 /* Debug */,
+				67DC64591957777D00D87BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DC645A1957777D00D87BB4 /* Build configuration list for PBXNativeTarget "Shutdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DC645B1957777D00D87BB4 /* Debug */,
+				67DC645C1957777D00D87BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67DC64341957777D00D87BB4 /* Project object */;
+}

@@ -1,0 +1,9 @@
+platform :osx, "10.8"
+
+target "Shutdown" do
+  pod 'CocoaLumberjack'
+end
+target "Shutdown Tests", :exclusive => true do
+  pod 'Kiwi'	
+end
+
