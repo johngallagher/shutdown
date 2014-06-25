@@ -11,7 +11,6 @@
 		554D9EA1C85E4266AC5C50EF /* libPods-Shutdown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5600CCDBF36F4B1884460758 /* libPods-Shutdown.a */; };
 		6700463E1957888800DE3446 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6700463D1957888800DE3446 /* XCTest.framework */; };
 		670046441957888800DE3446 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 670046421957888800DE3446 /* InfoPlist.strings */; };
-		670046461957888800DE3446 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 670046451957888800DE3446 /* MathSpec.m */; };
 		67DC64421957777D00D87BB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64411957777D00D87BB4 /* Cocoa.framework */; };
 		67DC64441957777D00D87BB4 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64431957777D00D87BB4 /* PreferencePanes.framework */; };
 		67DC644E1957777D00D87BB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67DC644C1957777D00D87BB4 /* InfoPlist.strings */; };
@@ -37,7 +36,6 @@
 		6700463D1957888800DE3446 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		670046411957888800DE3446 /* Shutdown Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shutdown Tests-Info.plist"; sourceTree = "<group>"; };
 		670046431957888800DE3446 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		670046451957888800DE3446 /* MathSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
 		670046471957888800DE3446 /* Shutdown Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shutdown Tests-Prefix.pch"; sourceTree = "<group>"; };
 		67DC643E1957777D00D87BB4 /* Shutdown.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shutdown.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DC64411957777D00D87BB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -82,7 +80,6 @@
 		6700463F1957888800DE3446 /* Shutdown Tests */ = {
 			isa = PBXGroup;
 			children = (
-				670046451957888800DE3446 /* MathSpec.m */,
 				670046401957888800DE3446 /* Supporting Files */,
 			);
 			path = "Shutdown Tests";
@@ -350,7 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				670046461957888800DE3446 /* MathSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
