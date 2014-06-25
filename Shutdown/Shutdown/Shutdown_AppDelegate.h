@@ -6,6 +6,8 @@
 //  Copyright 2009 Synaptic Mishap. All rights reserved.
 //
 
+#import "HelperAppController.h"
+
 @interface Shutdown_AppDelegate : NSObject {
     BOOL            shutdownIsRunning;
     IBOutlet        NSTextField         *shutdownStatusText;
@@ -19,9 +21,9 @@
     IBOutlet        NSUserDefaultsController    *userDefaultsController;
     HelperAppController                 *helperAppController;
     
-    NSDate      *startTime   ;
-    NSDate      *stopTime    ;
-    NSNumber    *reminderTime;
+    __unsafe_unretained NSDate      *startTime   ;
+    __unsafe_unretained NSDate      *stopTime    ;
+    __unsafe_unretained NSNumber    *reminderTime;
     
 }
 

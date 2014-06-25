@@ -42,8 +42,8 @@ static NSMutableDictionary *singletonObjects;
 
 //Release the singletonObjects dictionary and by that destroy all the objects it contains
 +(void)destroyAllSingletons {
-	NSMutableDictionary *dict = singletonObjects;
-    
+//	NSMutableDictionary *dict = singletonObjects;
+  
 	//We first make singletonObjects to point to nil in order to allow deallocation of our singletons,
 	singletonObjects = nil;
 	//and then release the dictionary. When the dictionary is released, it releases all its objects.

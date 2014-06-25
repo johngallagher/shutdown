@@ -6,6 +6,8 @@
 //  Copyright 2009 Synaptic Mishap. All rights reserved.
 //
 
+//#import "AbstractSingletonObject.h"
+
 @interface HelperAppController : AbstractSingletonObject {
 
 }

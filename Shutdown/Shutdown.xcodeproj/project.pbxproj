@@ -20,14 +20,21 @@
 		6758A543195A6B9700D2B0BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64411957777D00D87BB4 /* Cocoa.framework */; };
 		6758A544195A6B9700D2B0BE /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64431957777D00D87BB4 /* PreferencePanes.framework */; };
 		6758A54A195A6B9700D2B0BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6758A548195A6B9700D2B0BE /* InfoPlist.strings */; };
-		6758A54E195A6B9700D2B0BE /* ShutdownPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A54D195A6B9700D2B0BE /* ShutdownPreferencePane.m */; };
 		6758A550195A6B9700D2B0BE /* ShutdownPreferencePane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */; };
-		6758A553195A6B9700D2B0BE /* ShutdownPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6758A551195A6B9700D2B0BE /* ShutdownPreferencePane.xib */; };
 		6758A55D195A6CAB00D2B0BE /* HelperApp_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BD195A6A0F00D2B0BE /* HelperApp_AppDelegate.m */; };
 		6758A55F195A6CB100D2B0BE /* HelperAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */; };
 		6758A561195A6CC100D2B0BE /* ShutdownHelperToolExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4CB195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.m */; };
 		6758A562195A6F0C00D2B0BE /* AbstractSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BB195A6A0F00D2B0BE /* AbstractSingletonObject.m */; };
 		6758A563195A6F8700D2B0BE /* JGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C1195A6A0F00D2B0BE /* JGConstants.m */; };
+		6758A569195AB13400D2B0BE /* ShutdownPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6758A567195AB13400D2B0BE /* ShutdownPref.xib */; };
+		6758A56E195AB1D900D2B0BE /* NSDate+JGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */; };
+		6758A56F195AB1D900D2B0BE /* Shutdown_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */; };
+		6758A570195AB1D900D2B0BE /* ShutdownPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */; };
+		6758A572195AB1D900D2B0BE /* ShutdownPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A54D195A6B9700D2B0BE /* ShutdownPreferencePane.m */; };
+		6758A573195AB21600D2B0BE /* HelperAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */; };
+		6758A574195AB24E00D2B0BE /* JGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6758A4C2195A6A0F00D2B0BE /* JGDefines.h */; };
+		6758A575195B651800D2B0BE /* AbstractSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BB195A6A0F00D2B0BE /* AbstractSingletonObject.m */; };
+		6758A576195B652800D2B0BE /* JGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C1195A6A0F00D2B0BE /* JGConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,17 +62,15 @@
 		6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperAppController.m; path = ../Shutdown/HelperAppController.m; sourceTree = "<group>"; };
 		6758A4C1195A6A0F00D2B0BE /* JGConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGConstants.m; path = ../Shutdown/JGConstants.m; sourceTree = "<group>"; };
 		6758A4C2195A6A0F00D2B0BE /* JGDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGDefines.h; path = ../Shutdown/JGDefines.h; sourceTree = "<group>"; };
-		6758A4C3195A6A0F00D2B0BE /* NSDate+JGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JGUtilities.h"; sourceTree = "<group>"; };
-		6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JGUtilities.m"; sourceTree = "<group>"; };
-		6758A4C5195A6A0F00D2B0BE /* Shutdown_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shutdown_AppDelegate.h; sourceTree = "<group>"; };
-		6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shutdown_AppDelegate.m; sourceTree = "<group>"; };
-		6758A4C7195A6A0F00D2B0BE /* Shutdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shutdown.h; sourceTree = "<group>"; };
-		6758A4C8195A6A0F00D2B0BE /* Shutdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shutdown.m; sourceTree = "<group>"; };
-		6758A4C9195A6A0F00D2B0BE /* Shutdown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shutdown.tiff; sourceTree = "<group>"; };
+		6758A4C3195A6A0F00D2B0BE /* NSDate+JGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JGUtilities.h"; path = "../Shutdown/NSDate+JGUtilities.h"; sourceTree = "<group>"; };
+		6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JGUtilities.m"; path = "../Shutdown/NSDate+JGUtilities.m"; sourceTree = "<group>"; };
+		6758A4C5195A6A0F00D2B0BE /* Shutdown_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shutdown_AppDelegate.h; path = ../Shutdown/Shutdown_AppDelegate.h; sourceTree = "<group>"; };
+		6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shutdown_AppDelegate.m; path = ../Shutdown/Shutdown_AppDelegate.m; sourceTree = "<group>"; };
+		6758A4C9195A6A0F00D2B0BE /* Shutdown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Shutdown.tiff; path = ../Shutdown/Shutdown.tiff; sourceTree = "<group>"; };
 		6758A4CA195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShutdownHelperToolExecutor.h; path = ../Shutdown/ShutdownHelperToolExecutor.h; sourceTree = "<group>"; };
 		6758A4CB195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShutdownHelperToolExecutor.m; path = ../Shutdown/ShutdownHelperToolExecutor.m; sourceTree = "<group>"; };
-		6758A4CC195A6A0F00D2B0BE /* ShutdownPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShutdownPref.h; sourceTree = "<group>"; };
-		6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShutdownPref.m; sourceTree = "<group>"; };
+		6758A4CC195A6A0F00D2B0BE /* ShutdownPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShutdownPref.h; path = ../Shutdown/ShutdownPref.h; sourceTree = "<group>"; };
+		6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShutdownPref.m; path = ../Shutdown/ShutdownPref.m; sourceTree = "<group>"; };
 		6758A50A195A6A5600D2B0BE /* Shutdown copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Shutdown copy-Info.plist"; path = "/Users/johngallagher/Dropbox/Projects/ProgrammingProjects/CurrentProjects/ShutdownMavericks/Shutdown/Shutdown copy-Info.plist"; sourceTree = "<absolute>"; };
 		6758A50F195A6AFB00D2B0BE /* HelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6758A513195A6AFB00D2B0BE /* HelperApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelperApp-Info.plist"; sourceTree = "<group>"; };
@@ -88,18 +93,13 @@
 		6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ShutdownPreferencePane.tiff; sourceTree = "<group>"; };
 		6758A552195A6B9700D2B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShutdownPreferencePane.xib; sourceTree = "<group>"; };
 		6758A566195A70B600D2B0BE /* JGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGConstants.h; path = Shutdown/JGConstants.h; sourceTree = SOURCE_ROOT; };
+		6758A568195AB13400D2B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShutdownPref.xib; sourceTree = "<group>"; };
 		67DC64411957777D00D87BB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		67DC64431957777D00D87BB4 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		67DC64461957777D00D87BB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		67DC64471957777D00D87BB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		67DC64481957777D00D87BB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		67DC644B1957777D00D87BB4 /* Shutdown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shutdown-Info.plist"; sourceTree = "<group>"; };
-		67DC644D1957777D00D87BB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		67DC644F1957777D00D87BB4 /* Shutdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shutdown-Prefix.pch"; sourceTree = "<group>"; };
-		67DC64501957777D00D87BB4 /* Shutdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shutdown.h; sourceTree = "<group>"; };
-		67DC64511957777D00D87BB4 /* Shutdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shutdown.m; sourceTree = "<group>"; };
-		67DC64531957777D00D87BB4 /* Shutdown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shutdown.tiff; sourceTree = "<group>"; };
-		67DC64561957777D00D87BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Shutdown.xib; sourceTree = "<group>"; };
+		67DC64531957777D00D87BB4 /* Shutdown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Shutdown.tiff; path = ../Shutdown/Shutdown.tiff; sourceTree = "<group>"; };
 		751EE0E37A3048EAAE500C11 /* libPods-Shutdown Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shutdown Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0F96567B6A447EB89EA35F /* Pods-Shutdown Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shutdown Tests.xcconfig"; path = "Pods/Pods-Shutdown Tests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,8 +159,6 @@
 				6758A4CB195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.m */,
 				6758A4BC195A6A0F00D2B0BE /* HelperApp_AppDelegate.h */,
 				6758A4BD195A6A0F00D2B0BE /* HelperApp_AppDelegate.m */,
-				6758A4BE195A6A0F00D2B0BE /* HelperAppController.h */,
-				6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */,
 				6758A520195A6AFB00D2B0BE /* MainMenu.xib */,
 				6758A523195A6AFB00D2B0BE /* Images.xcassets */,
 				6758A512195A6AFB00D2B0BE /* Supporting Files */,
@@ -201,6 +199,15 @@
 		6758A545195A6B9700D2B0BE /* ShutdownPreferencePane */ = {
 			isa = PBXGroup;
 			children = (
+				67DC64531957777D00D87BB4 /* Shutdown.tiff */,
+				6758A4C3195A6A0F00D2B0BE /* NSDate+JGUtilities.h */,
+				6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */,
+				6758A4C5195A6A0F00D2B0BE /* Shutdown_AppDelegate.h */,
+				6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */,
+				6758A4C9195A6A0F00D2B0BE /* Shutdown.tiff */,
+				6758A4CC195A6A0F00D2B0BE /* ShutdownPref.h */,
+				6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */,
+				6758A567195AB13400D2B0BE /* ShutdownPref.xib */,
 				6758A54C195A6B9700D2B0BE /* ShutdownPreferencePane.h */,
 				6758A54D195A6B9700D2B0BE /* ShutdownPreferencePane.m */,
 				6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */,
@@ -228,6 +235,8 @@
 				6758A4C2195A6A0F00D2B0BE /* JGDefines.h */,
 				6758A4BA195A6A0F00D2B0BE /* AbstractSingletonObject.h */,
 				6758A4BB195A6A0F00D2B0BE /* AbstractSingletonObject.m */,
+				6758A4BE195A6A0F00D2B0BE /* HelperAppController.h */,
+				6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -236,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				6758A565195A6FDE00D2B0BE /* Shared */,
-				67DC64491957777D00D87BB4 /* Shutdown */,
 				6700463F1957888800DE3446 /* Shutdown Tests */,
 				6758A511195A6AFB00D2B0BE /* HelperApp */,
 				6758A52E195A6AFC00D2B0BE /* HelperAppTests */,
@@ -282,37 +290,6 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		67DC64491957777D00D87BB4 /* Shutdown */ = {
-			isa = PBXGroup;
-			children = (
-				6758A4C3195A6A0F00D2B0BE /* NSDate+JGUtilities.h */,
-				6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */,
-				6758A4C5195A6A0F00D2B0BE /* Shutdown_AppDelegate.h */,
-				6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */,
-				6758A4C7195A6A0F00D2B0BE /* Shutdown.h */,
-				6758A4C8195A6A0F00D2B0BE /* Shutdown.m */,
-				6758A4C9195A6A0F00D2B0BE /* Shutdown.tiff */,
-				6758A4CC195A6A0F00D2B0BE /* ShutdownPref.h */,
-				6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */,
-				67DC64501957777D00D87BB4 /* Shutdown.h */,
-				67DC64511957777D00D87BB4 /* Shutdown.m */,
-				67DC64531957777D00D87BB4 /* Shutdown.tiff */,
-				67DC64551957777D00D87BB4 /* Shutdown.xib */,
-				67DC644A1957777D00D87BB4 /* Supporting Files */,
-			);
-			path = Shutdown;
-			sourceTree = "<group>";
-		};
-		67DC644A1957777D00D87BB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				67DC644B1957777D00D87BB4 /* Shutdown-Info.plist */,
-				67DC644C1957777D00D87BB4 /* InfoPlist.strings */,
-				67DC644F1957777D00D87BB4 /* Shutdown-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -320,6 +297,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6758A574195AB24E00D2B0BE /* JGDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6758A54A195A6B9700D2B0BE /* InfoPlist.strings in Resources */,
-				6758A553195A6B9700D2B0BE /* ShutdownPreferencePane.xib in Resources */,
+				6758A569195AB13400D2B0BE /* ShutdownPref.xib in Resources */,
 				6758A550195A6B9700D2B0BE /* ShutdownPreferencePane.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6758A54E195A6B9700D2B0BE /* ShutdownPreferencePane.m in Sources */,
+				6758A576195B652800D2B0BE /* JGConstants.m in Sources */,
+				6758A56F195AB1D900D2B0BE /* Shutdown_AppDelegate.m in Sources */,
+				6758A572195AB1D900D2B0BE /* ShutdownPreferencePane.m in Sources */,
+				6758A570195AB1D900D2B0BE /* ShutdownPref.m in Sources */,
+				6758A56E195AB1D900D2B0BE /* NSDate+JGUtilities.m in Sources */,
+				6758A575195B651800D2B0BE /* AbstractSingletonObject.m in Sources */,
+				6758A573195AB21600D2B0BE /* HelperAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,20 +538,12 @@
 			name = ShutdownPreferencePane.xib;
 			sourceTree = "<group>";
 		};
-		67DC644C1957777D00D87BB4 /* InfoPlist.strings */ = {
+		6758A567195AB13400D2B0BE /* ShutdownPref.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				67DC644D1957777D00D87BB4 /* en */,
+				6758A568195AB13400D2B0BE /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		67DC64551957777D00D87BB4 /* Shutdown.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67DC64561957777D00D87BB4 /* Base */,
-			);
-			name = Shutdown.xib;
+			name = ShutdownPref.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

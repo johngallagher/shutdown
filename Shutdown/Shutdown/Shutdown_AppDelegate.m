@@ -44,12 +44,12 @@
                              kCFPreferencesCurrentUser,
                              kCFPreferencesAnyHost);
     // Read from the prefs.
-    CFPropertyListRef startTimeValue = CFPreferencesCopyValue((CFStringRef)kStartTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-    CFPropertyListRef stopTimeValue = CFPreferencesCopyValue((CFStringRef)kStopTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-    CFPropertyListRef reminderTimeValue = CFPreferencesCopyValue((CFStringRef)kReminderTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-    [self setStartTime: (NSDate *)startTimeValue];
-    [self setStopTime:  (NSDate *)stopTimeValue];
-    [self setReminderTime:(NSNumber *)reminderTimeValue];
+    CFPropertyListRef startTimeValue = CFPreferencesCopyValue((__bridge CFStringRef)kStartTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+    CFPropertyListRef stopTimeValue = CFPreferencesCopyValue((__bridge CFStringRef)kStopTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+    CFPropertyListRef reminderTimeValue = CFPreferencesCopyValue((__bridge CFStringRef)kReminderTime, (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER, kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+    [self setStartTime: (__bridge NSDate *)startTimeValue];
+    [self setStopTime:  (__bridge NSDate *)stopTimeValue];
+    [self setReminderTime:(__bridge NSNumber *)reminderTimeValue];
 //    startTime       = (NSDate *)startTimeValue;
 //    stopTime        = (NSDate *)stopTimeValue;
 //    reminderTime    = (NSNumber *)reminderTimeValue;
@@ -64,20 +64,20 @@
 }
 
 -(void)applyPreferences {
-    CFPreferencesSetValue((CFStringRef)kStartTime,
-                          (CFStringRef)[startTimeTextField objectValue],
+    CFPreferencesSetValue((__bridge CFStringRef)kStartTime,
+                          (__bridge CFStringRef)[startTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
     
-    CFPreferencesSetValue((CFStringRef)kStopTime,
-                          (CFStringRef)[stopTimeTextField objectValue],
+    CFPreferencesSetValue((__bridge CFStringRef)kStopTime,
+                          (__bridge CFStringRef)[stopTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
     
-    CFPreferencesSetValue((CFStringRef)kReminderTime,
-                          (CFStringRef)[reminderTimeTextField objectValue],
+    CFPreferencesSetValue((__bridge CFStringRef)kReminderTime,
+                          (__bridge CFStringRef)[reminderTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
@@ -93,20 +93,20 @@
 -(IBAction)applyPreferences:(id)sender {
     // Set up the preference.
     NSLog(@"About to set the prefs.");
-    CFPreferencesSetValue((CFStringRef)kStartTime,
-                          (CFStringRef)[startTimeTextField objectValue],
+    CFPreferencesSetValue((__bridge CFStringRef)kStartTime,
+                          (__bridge CFStringRef)[startTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
 
-    ((CFStringRef)kStopTime,
-                          (CFStringRef)[stopTimeTextField objectValue],
+    ((__bridge CFStringRef)kStopTime,
+                          (__bridge CFStringRef)[stopTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
 
-    CFPreferencesSetValue((CFStringRef)kReminderTime,
-                          (CFStringRef)[reminderTimeTextField objectValue],
+    CFPreferencesSetValue((__bridge CFStringRef)kReminderTime,
+                          (__bridge CFStringRef)[reminderTimeTextField objectValue],
                           (CFStringRef)HELPERAPP_BUNDLE_IDENTIFIER,
                           kCFPreferencesCurrentUser,
                           kCFPreferencesAnyHost);
@@ -145,7 +145,7 @@
                                                                              kLSSharedFileListItemLast, 
                                                                              NULL, 
                                                                              NULL,
-                                                                             (CFURLRef)itemURL, 
+                                                                             (__bridge CFURLRef)itemURL,
                                                                              NULL, 
                                                                              NULL);             
         if (loginItemRef) {

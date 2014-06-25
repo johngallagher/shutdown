@@ -5,5 +5,9 @@
 //
 
 #ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
+  #import <Cocoa/Cocoa.h>
+#import "AbstractSingletonObject.h"
+#import "JGDefines.h"
+#import "JGConstants.h"
+#import "NSDate+JGUtilities.h"
 #endif
