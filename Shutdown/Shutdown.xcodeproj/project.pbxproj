@@ -20,13 +20,11 @@
 		6758A543195A6B9700D2B0BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64411957777D00D87BB4 /* Cocoa.framework */; };
 		6758A544195A6B9700D2B0BE /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DC64431957777D00D87BB4 /* PreferencePanes.framework */; };
 		6758A54A195A6B9700D2B0BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6758A548195A6B9700D2B0BE /* InfoPlist.strings */; };
-		6758A550195A6B9700D2B0BE /* ShutdownPreferencePane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */; };
 		6758A55D195A6CAB00D2B0BE /* HelperApp_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BD195A6A0F00D2B0BE /* HelperApp_AppDelegate.m */; };
 		6758A55F195A6CB100D2B0BE /* HelperAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BF195A6A0F00D2B0BE /* HelperAppController.m */; };
 		6758A561195A6CC100D2B0BE /* ShutdownHelperToolExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4CB195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.m */; };
 		6758A562195A6F0C00D2B0BE /* AbstractSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BB195A6A0F00D2B0BE /* AbstractSingletonObject.m */; };
 		6758A563195A6F8700D2B0BE /* JGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C1195A6A0F00D2B0BE /* JGConstants.m */; };
-		6758A569195AB13400D2B0BE /* ShutdownPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6758A567195AB13400D2B0BE /* ShutdownPref.xib */; };
 		6758A56E195AB1D900D2B0BE /* NSDate+JGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C4195A6A0F00D2B0BE /* NSDate+JGUtilities.m */; };
 		6758A56F195AB1D900D2B0BE /* Shutdown_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C6195A6A0F00D2B0BE /* Shutdown_AppDelegate.m */; };
 		6758A570195AB1D900D2B0BE /* ShutdownPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4CD195A6A0F00D2B0BE /* ShutdownPref.m */; };
@@ -35,6 +33,9 @@
 		6758A574195AB24E00D2B0BE /* JGDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6758A4C2195A6A0F00D2B0BE /* JGDefines.h */; };
 		6758A575195B651800D2B0BE /* AbstractSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4BB195A6A0F00D2B0BE /* AbstractSingletonObject.m */; };
 		6758A576195B652800D2B0BE /* JGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6758A4C1195A6A0F00D2B0BE /* JGConstants.m */; };
+		6758A578195CD02500D2B0BE /* QuitAllApps.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 6758A577195CD02500D2B0BE /* QuitAllApps.scpt */; };
+		67892DB2195CDC6400EB2B09 /* ShutdownPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6758A567195AB13400D2B0BE /* ShutdownPref.xib */; };
+		67892DB3195CDCD000EB2B09 /* ShutdownPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6758A551195A6B9700D2B0BE /* ShutdownPreferencePane.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,10 +91,10 @@
 		6758A54B195A6B9700D2B0BE /* ShutdownPreferencePane-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShutdownPreferencePane-Prefix.pch"; sourceTree = "<group>"; };
 		6758A54C195A6B9700D2B0BE /* ShutdownPreferencePane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShutdownPreferencePane.h; sourceTree = "<group>"; };
 		6758A54D195A6B9700D2B0BE /* ShutdownPreferencePane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShutdownPreferencePane.m; sourceTree = "<group>"; };
-		6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ShutdownPreferencePane.tiff; sourceTree = "<group>"; };
 		6758A552195A6B9700D2B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShutdownPreferencePane.xib; sourceTree = "<group>"; };
 		6758A566195A70B600D2B0BE /* JGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGConstants.h; path = Shutdown/JGConstants.h; sourceTree = SOURCE_ROOT; };
 		6758A568195AB13400D2B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShutdownPref.xib; sourceTree = "<group>"; };
+		6758A577195CD02500D2B0BE /* QuitAllApps.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = QuitAllApps.scpt; path = Shutdown/QuitAllApps.scpt; sourceTree = SOURCE_ROOT; };
 		67DC64411957777D00D87BB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		67DC64431957777D00D87BB4 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		67DC64461957777D00D87BB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -155,6 +156,7 @@
 		6758A511195A6AFB00D2B0BE /* HelperApp */ = {
 			isa = PBXGroup;
 			children = (
+				6758A577195CD02500D2B0BE /* QuitAllApps.scpt */,
 				6758A4CA195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.h */,
 				6758A4CB195A6A0F00D2B0BE /* ShutdownHelperToolExecutor.m */,
 				6758A4BC195A6A0F00D2B0BE /* HelperApp_AppDelegate.h */,
@@ -210,7 +212,6 @@
 				6758A567195AB13400D2B0BE /* ShutdownPref.xib */,
 				6758A54C195A6B9700D2B0BE /* ShutdownPreferencePane.h */,
 				6758A54D195A6B9700D2B0BE /* ShutdownPreferencePane.m */,
-				6758A54F195A6B9700D2B0BE /* ShutdownPreferencePane.tiff */,
 				6758A551195A6B9700D2B0BE /* ShutdownPreferencePane.xib */,
 				6758A546195A6B9700D2B0BE /* Supporting Files */,
 			);
@@ -400,6 +401,7 @@
 			files = (
 				6758A516195A6AFB00D2B0BE /* InfoPlist.strings in Resources */,
 				6758A524195A6AFB00D2B0BE /* Images.xcassets in Resources */,
+				6758A578195CD02500D2B0BE /* QuitAllApps.scpt in Resources */,
 				6758A51C195A6AFB00D2B0BE /* Credits.rtf in Resources */,
 				6758A522195A6AFB00D2B0BE /* MainMenu.xib in Resources */,
 			);
@@ -418,8 +420,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6758A54A195A6B9700D2B0BE /* InfoPlist.strings in Resources */,
-				6758A569195AB13400D2B0BE /* ShutdownPref.xib in Resources */,
-				6758A550195A6B9700D2B0BE /* ShutdownPreferencePane.tiff in Resources */,
+				67892DB3195CDCD000EB2B09 /* ShutdownPreferencePane.xib in Resources */,
+				67892DB2195CDC6400EB2B09 /* ShutdownPref.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +673,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -703,7 +705,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -717,6 +719,7 @@
 				6758A538195A6AFC00D2B0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6758A539195A6AFC00D2B0BE /* Build configuration list for PBXNativeTarget "HelperAppTests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +728,7 @@
 				6758A53B195A6AFC00D2B0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6758A554195A6B9700D2B0BE /* Build configuration list for PBXNativeTarget "ShutdownPreferencePane" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +737,7 @@
 				6758A556195A6B9700D2B0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67DC64371957777D00D87BB4 /* Build configuration list for PBXProject "Shutdown" */ = {
 			isa = XCConfigurationList;

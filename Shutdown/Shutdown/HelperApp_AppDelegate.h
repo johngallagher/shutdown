@@ -17,7 +17,8 @@
     NSDate      *startTimeToday;
     NSDate      *stopTimeToday;
     NSDate      *reminderTimeToday;
-    
+  
+  IBOutlet NSWindow *window;
     IBOutlet    NSTimer     *shutdownTimer;
     IBOutlet    NSTimer     *warnBeforeShutdownTimer;
     

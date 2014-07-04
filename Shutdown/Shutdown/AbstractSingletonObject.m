@@ -29,7 +29,7 @@ static NSMutableDictionary *singletonObjects;
 	if (singletonObjects) {
 		//Look of we already have an instance
 		@synchronized(singletonObjects) {
-			returnedObject = [singletonObjects objectForKey:[self class]];
+			returnedObject = singletonObjects[[self class]];
 		}
         
 		//We don't have any instance so lets create it
@@ -61,7 +61,7 @@ static NSMutableDictionary *singletonObjects;
 //Implemented by subclasses
 -(id)initSingleton {
 	Class class = [self class];
-	id object = [singletonObjects objectForKey:class];
+	id object = singletonObjects[class];
     
 	if (object || _isInitialized) {
 		NSLog(@"Initializing an object twice is not a very good idea...");
@@ -69,9 +69,9 @@ static NSMutableDictionary *singletonObjects;
 		return [[self class] sharedInstance];
 	} else {
 		@synchronized(singletonObjects) {
-			if (![singletonObjects objectForKey:class]) {
+			if (!singletonObjects[class]) {
 				[self setIsInitialized:YES];
-				[singletonObjects setObject:self forKey:class];
+				singletonObjects[class] = self;
 			}
 		}
 		return self;
@@ -87,7 +87,7 @@ static NSMutableDictionary *singletonObjects;
 	id object = nil;
     
 	if (singletonObjects) {
-		object = [singletonObjects objectForKey:[self class]];
+		object = singletonObjects[[self class]];
         
 		if (object) {
 			NSLog(@"An attempt to allocate a new %@ singleton object has been made. "

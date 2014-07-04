@@ -27,7 +27,7 @@
 	<key>NSMainNibFile</key>
 	<string>ShutdownPreferencePane</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>ShutdownPreferencePane.tiff</string>
+	<string>Shutdown.tiff</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>ShutdownPreferencePane</string>
 	<key>NSPrincipalClass</key>

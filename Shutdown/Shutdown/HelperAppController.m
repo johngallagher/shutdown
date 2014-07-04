@@ -51,7 +51,7 @@
 	while (GetNextProcess(&PSN) == noErr) {
 		NSDictionary *infoDict = (__bridge NSDictionary *)ProcessInformationCopyDictionary(&PSN, kProcessDictionaryIncludeAllInformationMask);
 		if(infoDict) {
-			NSString *bundleID = [infoDict objectForKey:(NSString *)kCFBundleIdentifierKey];
+			NSString *bundleID = infoDict[(NSString *)kCFBundleIdentifierKey];
 			isRunning = bundleID && [bundleID isEqualToString:theBundleIdentifier];
 		}
 		if (isRunning)
@@ -69,7 +69,7 @@
 	unsigned options = NSWorkspaceLaunchWithoutAddingToRecents | NSWorkspaceLaunchWithoutActivation | NSWorkspaceLaunchAsync;
     
     
-	[[NSWorkspace sharedWorkspace] openURLs:[NSArray arrayWithObject:helperURL]
+	[[NSWorkspace sharedWorkspace] openURLs:@[helperURL]
 	                withAppBundleIdentifier:nil
 	                                options:options
 	         additionalEventParamDescriptor:nil
