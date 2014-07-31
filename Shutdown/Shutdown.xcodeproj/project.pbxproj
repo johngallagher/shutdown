@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		675ADAD91978690A00A3D522 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF44919674C2F0002806E /* MainMenu.xib */; };
 		67EDF43519674C2F0002806E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF43419674C2F0002806E /* Cocoa.framework */; };
 		67EDF43F19674C2F0002806E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF43D19674C2F0002806E /* InfoPlist.strings */; };
 		67EDF44119674C2F0002806E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDF44019674C2F0002806E /* main.m */; };
 		67EDF44519674C2F0002806E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF44319674C2F0002806E /* Credits.rtf */; };
 		67EDF44819674C2F0002806E /* JGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDF44719674C2F0002806E /* JGAppDelegate.m */; };
-		67EDF44B19674C2F0002806E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF44919674C2F0002806E /* MainMenu.xib */; };
 		67EDF44D19674C2F0002806E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF44C19674C2F0002806E /* Images.xcassets */; };
 		67EDF45419674C2F0002806E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF45319674C2F0002806E /* XCTest.framework */; };
 		67EDF45519674C2F0002806E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF43419674C2F0002806E /* Cocoa.framework */; };
 		67EDF45D19674C300002806E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF45B19674C300002806E /* InfoPlist.strings */; };
-		67EDF45F19674C300002806E /* ShutdownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDF45E19674C300002806E /* ShutdownTests.m */; };
+		75B78C3B2036400EAE2A0703 /* libPods-Shutdown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */; };
+		9F8CF14991D0427E78A677C3 /* JGSystemDisablerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */; };
+		9F8CF401EBD258435D16510B /* JGTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */; };
+		9F8CF71EF3A3141CE07C50A1 /* JGSystemDisabler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */; };
+		9F8CF9B1DBE515BC8BCF58CB /* JGTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF268271395CB87657305 /* JGTimerTest.m */; };
+		F7ACD84E616A41739410F7B5 /* libPods-ShutdownTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9550CB311E74B1286915E2F /* libPods-ShutdownTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6793FA782CB64A69AB616F0F /* Pods-Shutdown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shutdown.xcconfig"; path = "Pods/Pods-Shutdown.xcconfig"; sourceTree = "<group>"; };
 		67EDF43119674C2F0002806E /* Shutdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shutdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EDF43419674C2F0002806E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		67EDF43719674C2F0002806E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,7 +55,20 @@
 		67EDF45319674C2F0002806E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		67EDF45A19674C2F0002806E /* ShutdownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShutdownTests-Info.plist"; sourceTree = "<group>"; };
 		67EDF45C19674C300002806E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		67EDF45E19674C300002806E /* ShutdownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShutdownTests.m; sourceTree = "<group>"; };
+		9F8CF1EF8E37C1DE1726D6B3 /* JGSystemDisabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSystemDisabler.h; sourceTree = "<group>"; };
+		9F8CF268271395CB87657305 /* JGTimerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTimerTest.m; sourceTree = "<group>"; };
+		9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemDisabler.m; sourceTree = "<group>"; };
+		9F8CF579FD45A2209E44AD6E /* SystemShutdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShutdown.h; sourceTree = "<group>"; };
+		9F8CF7955909716087863033 /* JGTimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGTimerDelegate.h; path = Shutdown/JGTimerDelegate.h; sourceTree = SOURCE_ROOT; };
+		9F8CF9BFA14024D3F1A76CD1 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = Notes.md; path = Shutdown/Notes.md; sourceTree = "<group>"; };
+		9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemDisablerTest.m; sourceTree = "<group>"; };
+		9F8CFDC8E9F8AD13E30292B7 /* JGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGTimer.h; sourceTree = "<group>"; };
+		9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTimer.m; sourceTree = "<group>"; };
+		A6B1E735C92C4AD4A54D7C80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shutdown.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E37B1C50614A4595A0162E79 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EF0F4E8FCD384AB4BB8C33C0 /* Pods-ShutdownTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShutdownTests.xcconfig"; path = "Pods/Pods-ShutdownTests.xcconfig"; sourceTree = "<group>"; };
+		F9550CB311E74B1286915E2F /* libPods-ShutdownTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShutdownTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67EDF43519674C2F0002806E /* Cocoa.framework in Frameworks */,
+				75B78C3B2036400EAE2A0703 /* libPods-Shutdown.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +87,7 @@
 			files = (
 				67EDF45519674C2F0002806E /* Cocoa.framework in Frameworks */,
 				67EDF45419674C2F0002806E /* XCTest.framework in Frameworks */,
+				F7ACD84E616A41739410F7B5 /* libPods-ShutdownTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +101,10 @@
 				67EDF45819674C2F0002806E /* ShutdownTests */,
 				67EDF43319674C2F0002806E /* Frameworks */,
 				67EDF43219674C2F0002806E /* Products */,
+				9F8CF9BFA14024D3F1A76CD1 /* Notes.md */,
+				E37B1C50614A4595A0162E79 /* Pods.xcconfig */,
+				EF0F4E8FCD384AB4BB8C33C0 /* Pods-ShutdownTests.xcconfig */,
+				6793FA782CB64A69AB616F0F /* Pods-Shutdown.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +123,9 @@
 				67EDF43419674C2F0002806E /* Cocoa.framework */,
 				67EDF45319674C2F0002806E /* XCTest.framework */,
 				67EDF43619674C2F0002806E /* Other Frameworks */,
+				A6B1E735C92C4AD4A54D7C80 /* libPods.a */,
+				F9550CB311E74B1286915E2F /* libPods-ShutdownTests.a */,
+				DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +148,12 @@
 				67EDF44919674C2F0002806E /* MainMenu.xib */,
 				67EDF44C19674C2F0002806E /* Images.xcassets */,
 				67EDF43B19674C2F0002806E /* Supporting Files */,
+				9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */,
+				9F8CF1EF8E37C1DE1726D6B3 /* JGSystemDisabler.h */,
+				9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */,
+				9F8CFDC8E9F8AD13E30292B7 /* JGTimer.h */,
+				9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */,
+				9F8CF579FD45A2209E44AD6E /* SystemShutdown.h */,
 			);
 			path = Shutdown;
 			sourceTree = "<group>";
@@ -139,8 +173,9 @@
 		67EDF45819674C2F0002806E /* ShutdownTests */ = {
 			isa = PBXGroup;
 			children = (
-				67EDF45E19674C300002806E /* ShutdownTests.m */,
 				67EDF45919674C2F0002806E /* Supporting Files */,
+				9F8CF268271395CB87657305 /* JGTimerTest.m */,
+				9F8CF7955909716087863033 /* JGTimerDelegate.h */,
 			);
 			path = ShutdownTests;
 			sourceTree = "<group>";
@@ -161,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67EDF46219674C300002806E /* Build configuration list for PBXNativeTarget "Shutdown" */;
 			buildPhases = (
+				8370705AA44349AE8183088C /* Check Pods Manifest.lock */,
 				67EDF42D19674C2F0002806E /* Sources */,
 				67EDF42E19674C2F0002806E /* Frameworks */,
 				67EDF42F19674C2F0002806E /* Resources */,
+				ECE5256DEB994B448C5B1E80 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67EDF46519674C300002806E /* Build configuration list for PBXNativeTarget "ShutdownTests" */;
 			buildPhases = (
+				5E56568D74D846EDB8554B21 /* Check Pods Manifest.lock */,
 				67EDF44E19674C2F0002806E /* Sources */,
 				67EDF44F19674C2F0002806E /* Frameworks */,
 				67EDF45019674C2F0002806E /* Resources */,
+				7B012E3DD81A4ECF898C98D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,10 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				675ADAD91978690A00A3D522 /* MainMenu.xib in Resources */,
 				67EDF43F19674C2F0002806E /* InfoPlist.strings in Resources */,
 				67EDF44D19674C2F0002806E /* Images.xcassets in Resources */,
 				67EDF44519674C2F0002806E /* Credits.rtf in Resources */,
-				67EDF44B19674C2F0002806E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +287,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E56568D74D846EDB8554B21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B012E3DD81A4ECF898C98D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ShutdownTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8370705AA44349AE8183088C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE5256DEB994B448C5B1E80 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Shutdown-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		67EDF42D19674C2F0002806E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -255,6 +357,8 @@
 			files = (
 				67EDF44119674C2F0002806E /* main.m in Sources */,
 				67EDF44819674C2F0002806E /* JGAppDelegate.m in Sources */,
+				9F8CF71EF3A3141CE07C50A1 /* JGSystemDisabler.m in Sources */,
+				9F8CF401EBD258435D16510B /* JGTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67EDF45F19674C300002806E /* ShutdownTests.m in Sources */,
+				9F8CF9B1DBE515BC8BCF58CB /* JGTimerTest.m in Sources */,
+				9F8CF14991D0427E78A677C3 /* JGSystemDisablerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +451,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -378,12 +483,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		67EDF46319674C300002806E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6793FA782CB64A69AB616F0F /* Pods-Shutdown.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -391,12 +497,14 @@
 				GCC_PREFIX_HEADER = "Shutdown/Shutdown-Prefix.pch";
 				INFOPLIST_FILE = "Shutdown/Shutdown-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		67EDF46419674C300002806E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6793FA782CB64A69AB616F0F /* Pods-Shutdown.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -404,12 +512,14 @@
 				GCC_PREFIX_HEADER = "Shutdown/Shutdown-Prefix.pch";
 				INFOPLIST_FILE = "Shutdown/Shutdown-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		67EDF46619674C300002806E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF0F4E8FCD384AB4BB8C33C0 /* Pods-ShutdownTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shutdown.app/Contents/MacOS/Shutdown";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -432,6 +542,7 @@
 		};
 		67EDF46719674C300002806E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF0F4E8FCD384AB4BB8C33C0 /* Pods-ShutdownTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shutdown.app/Contents/MacOS/Shutdown";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -467,6 +578,7 @@
 				67EDF46419674C300002806E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67EDF46519674C300002806E /* Build configuration list for PBXNativeTarget "ShutdownTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +587,7 @@
 				67EDF46719674C300002806E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

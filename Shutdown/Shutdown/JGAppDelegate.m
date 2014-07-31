@@ -1,18 +1,20 @@
-//
-//  JGAppDelegate.m
-//  Shutdown
-//
-//  Created by John Gallagher on 04/07/2014.
-//  Copyright (c) 2014 Synaptic Mishap. All rights reserved.
-//
-
 #import "JGAppDelegate.h"
+#import "JGSystemDisabler.h"
 
 @implementation JGAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-  // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [[NSUserDefaults standardUserDefaults] addObserver:self
+                                            forKeyPath:@"shutdown"
+                                               options:NSKeyValueObservingOptionNew
+                                               context:NULL];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSDate dateWithTimeIntervalSinceNow:3] forKey:@"shutdown"];
 }
 
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context {
+    _disabler = [JGSystemDisabler stateWithStartup:[object valueForKey:@"startup"] shutdown:[object valueForKey:@"shutdown"] blockerView:blockerView];
+}
 @end

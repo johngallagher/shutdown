@@ -1,0 +1,7 @@
+target :Shutdown do
+  pod 'MyLilTimer', '~> 0.1'
+end
+
+target :ShutdownTests do
+  pod 'OCMock', '~> 3.0.0'
+end

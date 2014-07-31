@@ -1,0 +1,13 @@
+PODS:
+  - MyLilTimer (0.1.0)
+  - OCMock (3.0.2)
+
+DEPENDENCIES:
+  - MyLilTimer (~> 0.1)
+  - OCMock (~> 3.0.0)
+
+SPEC CHECKSUMS:
+  MyLilTimer: d5522837571a823f637b8982246012c015bace41
+  OCMock: b9836ab89d8d5e66cbe6333f93857037c310ee62
+
+COCOAPODS: 0.33.1
