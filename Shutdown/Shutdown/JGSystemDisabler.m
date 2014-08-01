@@ -35,7 +35,7 @@
 //                                       [NSNumber numberWithInt:2],      NSFullScreenModeWindowLevel,                                       
             nil];
     [fullScreenBlockerView enterFullScreenMode:[NSScreen mainScreen] withOptions:fullScreenOptions];
-    [NSApp activateIgnoringOtherApps:NO];
+    [NSApp activateIgnoringOtherApps:YES];
 
 }
 
