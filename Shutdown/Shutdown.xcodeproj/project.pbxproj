@@ -18,10 +18,10 @@
 		67EDF45519674C2F0002806E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF43419674C2F0002806E /* Cocoa.framework */; };
 		67EDF45D19674C300002806E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF45B19674C300002806E /* InfoPlist.strings */; };
 		75B78C3B2036400EAE2A0703 /* libPods-Shutdown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */; };
-		9F8CF14991D0427E78A677C3 /* JGSystemDisablerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */; };
-		9F8CF27387546803B1135536 /* JGTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF8D8E127C01C56EF0692 /* JGTimerTest.m */; };
+		9F8CF14991D0427E78A677C3 /* JGSystemStateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */; };
+		9F8CF168FC47E0C2FBB93C66 /* JGDisabler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF9CB3502A4A1B4CD57D3 /* JGDisabler.m */; };
 		9F8CF401EBD258435D16510B /* JGTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */; };
-		9F8CF71EF3A3141CE07C50A1 /* JGSystemDisabler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */; };
+		9F8CF71EF3A3141CE07C50A1 /* JGSystemState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF572522D84FB8F3DC5C7 /* JGSystemState.m */; };
 		F7ACD84E616A41739410F7B5 /* libPods-ShutdownTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9550CB311E74B1286915E2F /* libPods-ShutdownTests.a */; };
 /* End PBXBuildFile section */
 
@@ -55,13 +55,14 @@
 		67EDF45319674C2F0002806E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		67EDF45A19674C2F0002806E /* ShutdownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShutdownTests-Info.plist"; sourceTree = "<group>"; };
 		67EDF45C19674C300002806E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9F8CF1EF8E37C1DE1726D6B3 /* JGSystemDisabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSystemDisabler.h; sourceTree = "<group>"; };
-		9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemDisabler.m; sourceTree = "<group>"; };
-		9F8CF579FD45A2209E44AD6E /* SystemShutdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShutdown.h; sourceTree = "<group>"; };
+		9F8CF1EF8E37C1DE1726D6B3 /* JGSystemState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSystemState.h; sourceTree = "<group>"; };
+		9F8CF572522D84FB8F3DC5C7 /* JGSystemState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemState.m; sourceTree = "<group>"; };
+		9F8CF579FD45A2209E44AD6E /* JGSystemShutdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSystemShutdown.h; sourceTree = "<group>"; };
 		9F8CF7955909716087863033 /* JGTimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGTimerDelegate.h; path = Shutdown/JGTimerDelegate.h; sourceTree = SOURCE_ROOT; };
-		9F8CF8D8E127C01C56EF0692 /* JGTimerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTimerTest.m; sourceTree = "<group>"; };
 		9F8CF9BFA14024D3F1A76CD1 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = Notes.md; path = Shutdown/Notes.md; sourceTree = "<group>"; };
-		9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemDisablerTest.m; sourceTree = "<group>"; };
+		9F8CF9CB3502A4A1B4CD57D3 /* JGDisabler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGDisabler.m; sourceTree = "<group>"; };
+		9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemStateTest.m; sourceTree = "<group>"; };
+		9F8CFD34BDBFA5641BB800AF /* JGDisabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGDisabler.h; sourceTree = "<group>"; };
 		9F8CFDC8E9F8AD13E30292B7 /* JGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGTimer.h; sourceTree = "<group>"; };
 		9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTimer.m; sourceTree = "<group>"; };
 		A6B1E735C92C4AD4A54D7C80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,13 +149,14 @@
 				67EDF44919674C2F0002806E /* MainMenu.xib */,
 				67EDF44C19674C2F0002806E /* Images.xcassets */,
 				67EDF43B19674C2F0002806E /* Supporting Files */,
-				9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */,
-				9F8CF1EF8E37C1DE1726D6B3 /* JGSystemDisabler.h */,
+				9F8CF572522D84FB8F3DC5C7 /* JGSystemState.m */,
+				9F8CF1EF8E37C1DE1726D6B3 /* JGSystemState.h */,
 				9F8CFF9D467E1974D5AB8C8E /* JGTimer.m */,
 				9F8CFDC8E9F8AD13E30292B7 /* JGTimer.h */,
-				9F8CFABBB2BD8304F6FE0A39 /* JGSystemDisablerTest.m */,
-				9F8CF579FD45A2209E44AD6E /* SystemShutdown.h */,
-				9F8CF8D8E127C01C56EF0692 /* JGTimerTest.m */,
+				9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */,
+				9F8CF579FD45A2209E44AD6E /* JGSystemShutdown.h */,
+				9F8CF9CB3502A4A1B4CD57D3 /* JGDisabler.m */,
+				9F8CFD34BDBFA5641BB800AF /* JGDisabler.h */,
 			);
 			path = Shutdown;
 			sourceTree = "<group>";
@@ -357,8 +359,9 @@
 			files = (
 				67EDF44119674C2F0002806E /* main.m in Sources */,
 				67EDF44819674C2F0002806E /* JGAppDelegate.m in Sources */,
-				9F8CF71EF3A3141CE07C50A1 /* JGSystemDisabler.m in Sources */,
+				9F8CF71EF3A3141CE07C50A1 /* JGSystemState.m in Sources */,
 				9F8CF401EBD258435D16510B /* JGTimer.m in Sources */,
+				9F8CF168FC47E0C2FBB93C66 /* JGDisabler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,8 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8CF14991D0427E78A677C3 /* JGSystemDisablerTest.m in Sources */,
-				9F8CF27387546803B1135536 /* JGTimerTest.m in Sources */,
+				9F8CF14991D0427E78A677C3 /* JGSystemStateTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
