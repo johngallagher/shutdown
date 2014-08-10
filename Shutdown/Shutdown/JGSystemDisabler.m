@@ -14,16 +14,21 @@
   self = [super init];
   if (self) {
     view = aView;
-    shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
-                                                     target:self
-                                                   selector:@selector(disable)
-                                                   userInfo:nil
-                                                    repeats:NO];
+    if([self currentDateIsBetween:startupDate andDate:shutdownDate]) {
+      [self enable];
+    } else {
+      [self disable];
+    }
     startupTimer = [NSTimer scheduledTimerWithTimeInterval:[startupDate timeIntervalSinceNow]
                                                     target:self
                                                   selector:@selector(enable)
                                                   userInfo:nil
                                                    repeats:NO];
+    shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
+                                                     target:self
+                                                   selector:@selector(disable)
+                                                   userInfo:nil
+                                                    repeats:NO];
   }
 
   return self;
