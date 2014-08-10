@@ -2,5 +2,5 @@
 
 @protocol JGTimerDelegate <NSObject>
 
--(void)timerDidFireWithObject:(id)object;
+-(void)systemDidShutdown;
 @end

@@ -15,7 +15,7 @@
         delegate = aDelegate;
         timer = [NSTimer scheduledTimerWithTimeInterval:[aDate timeIntervalSinceNow]
                                                  target:delegate
-                                               selector:@selector(timerDidFireWithObject:)
+                                               selector:@selector(systemDidShutdown)
                                                userInfo:nil
                                                 repeats:NO];
     }

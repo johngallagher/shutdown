@@ -1,12 +1,12 @@
 #import <Cocoa/Cocoa.h>
 
-@class JGSystemState;
+@class JGSystemDisabler;
 
 @interface JGAppDelegate : NSObject <NSApplicationDelegate> {
-    JGSystemState *_disabler;
-    IBOutlet NSView *blockerView;
+  JGSystemDisabler *state;
+  IBOutlet NSView *blockerView;
 }
 
+@property(assign) IBOutlet NSWindow *window;
 
-@property (assign) IBOutlet NSWindow *window;
 @end
