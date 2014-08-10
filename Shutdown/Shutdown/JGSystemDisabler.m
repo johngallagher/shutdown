@@ -16,26 +16,46 @@
     view = aView;
     if([self currentDateIsBetween:startupDate andDate:shutdownDate]) {
       [self enable];
+      shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
+                                                       target:self
+                                                     selector:@selector(disable)
+                                                     userInfo:nil
+                                                      repeats:NO];
+    } else if([self currentDateIsBeforeStartup:startupDate]) {
+      [self disable];
+      startupTimer = [NSTimer scheduledTimerWithTimeInterval:[startupDate timeIntervalSinceNow]
+                                                      target:self
+                                                    selector:@selector(enable)
+                                                    userInfo:nil
+                                                     repeats:NO];
+      shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
+                                                       target:self
+                                                     selector:@selector(disable)
+                                                     userInfo:nil
+                                                      repeats:NO];
     } else {
       [self disable];
     }
-    startupTimer = [NSTimer scheduledTimerWithTimeInterval:[startupDate timeIntervalSinceNow]
-                                                    target:self
-                                                  selector:@selector(enable)
-                                                  userInfo:nil
-                                                   repeats:NO];
-    shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
-                                                     target:self
-                                                   selector:@selector(disable)
-                                                   userInfo:nil
-                                                    repeats:NO];
   }
 
   return self;
 }
 
+
 -(BOOL)currentDateIsBetween:(NSDate *)startupDate andDate:(NSDate *)shutdownDate {
-  return (([[NSDate date] compare:startupDate] == NSOrderedDescending) && ([[NSDate date] compare:shutdownDate] == NSOrderedAscending));
+  return ([self currentDateIsAfterStartup:startupDate] && [self currentDateIsBeforeShutdown:shutdownDate]);
+}
+
+-(BOOL)currentDateIsBeforeShutdown:(NSDate *)shutdownDate {
+  return ([[NSDate date] compare:shutdownDate] == NSOrderedAscending);
+}
+
+-(BOOL)currentDateIsAfterStartup:(NSDate *)startupDate {
+  return ([[NSDate date] compare:startupDate] == NSOrderedDescending);
+}
+
+-(BOOL)currentDateIsBeforeStartup:(NSDate *)startupDate {
+  return ![self currentDateIsAfterStartup:startupDate];
 }
 
 -(NSDictionary *)fullScreenOptions {
@@ -48,6 +68,7 @@
 
 -(void)enable {
   if ([view isInFullScreenMode]) {
+    NSLog(@"about to enable");
     [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
     [NSApp deactivate];
   }
@@ -55,8 +76,9 @@
 
 -(void)disable {
   if (![view isInFullScreenMode]) {
-    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
-    [NSApp activateIgnoringOtherApps:YES];
+    NSLog(@"about to disable");
+//    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
+//    [NSApp activateIgnoringOtherApps:YES];
   }
 }
 

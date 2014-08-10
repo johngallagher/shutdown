@@ -3,17 +3,25 @@
 
 @implementation JGAppDelegate
 
++(void)initialize {
+  [super initialize];
+  NSDateFormatter *format = [[NSDateFormatter alloc] init];
+  [format setTimeStyle:NSDateFormatterShortStyle];
+  [format setDateStyle:NSDateFormatterNoStyle];
+
+  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"8:00"], @"shutdown": [format dateFromString:@"20:00"]}];
+}
+
+
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+  [[NSUserDefaults standardUserDefaults] addObserver:self
+                                          forKeyPath:@"startup"
+                                             options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
+                                             context:NULL];
   [[NSUserDefaults standardUserDefaults] addObserver:self
                                           forKeyPath:@"shutdown"
                                              options:NSKeyValueObservingOptionNew
                                              context:NULL];
-  [[NSUserDefaults standardUserDefaults] addObserver:self
-                                          forKeyPath:@"startup"
-                                             options:NSKeyValueObservingOptionNew
-                                             context:NULL];
-  [[NSUserDefaults standardUserDefaults] setValue:[NSDate dateWithTimeIntervalSinceNow:5] forKey:@"startup"];
-  [[NSUserDefaults standardUserDefaults] setValue:[NSDate dateWithTimeIntervalSinceNow:10] forKey:@"shutdown"];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath
