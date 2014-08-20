@@ -2,37 +2,28 @@
 #import "JGSystemShutdown.h"
 
 
-@implementation JGSystemDisabler
+@implementation JGSystemDisabler {
+}
 
 @synthesize enabled;
 
-+(instancetype)disablerWithStartup:(NSDate *)aStartup shutdown:(NSDate *)aShutdown disablerView:(NSView *)aView {
-  return [[self alloc] initWithStartup:aStartup shutdown:aShutdown disablerView:aView];
++(instancetype)disablerWithStartupTime:(NSDate *)aStartup shutdownTime:(NSDate *)aShutdown disablerView:(NSView *)aView {
+  return [[self alloc] initWithStartupTime:aStartup shutdownTime:aShutdown disablerView:aView];
 }
 
--(instancetype)initWithStartup:(NSDate *)startupDate shutdown:(NSDate *)shutdownDate disablerView:(NSView *)aView {
+-(instancetype)initWithStartupTime:(NSDate *)aStartupTime shutdownTime:(NSDate *)aShutdownTime disablerView:(NSView *)aView {
   self = [super init];
   if (self) {
     view = aView;
-    if([self currentDateIsBetween:startupDate andDate:shutdownDate]) {
+    shutdownTime = aShutdownTime;
+    startupTime = aStartupTime;
+
+    NSDateComponents *startupComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:aStartupTime];
+    NSDateComponents *shutdownComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:aShutdownTime];
+
+
+    if([self currentDateIsBetweenStartupAndShutdown]) {
       [self enable];
-      shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
-                                                       target:self
-                                                     selector:@selector(disable)
-                                                     userInfo:nil
-                                                      repeats:NO];
-    } else if([self currentDateIsBeforeStartup:startupDate]) {
-      [self disable];
-      startupTimer = [NSTimer scheduledTimerWithTimeInterval:[startupDate timeIntervalSinceNow]
-                                                      target:self
-                                                    selector:@selector(enable)
-                                                    userInfo:nil
-                                                     repeats:NO];
-      shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[shutdownDate timeIntervalSinceNow]
-                                                       target:self
-                                                     selector:@selector(disable)
-                                                     userInfo:nil
-                                                      repeats:NO];
     } else {
       [self disable];
     }
@@ -42,20 +33,16 @@
 }
 
 
--(BOOL)currentDateIsBetween:(NSDate *)startupDate andDate:(NSDate *)shutdownDate {
-  return ([self currentDateIsAfterStartup:startupDate] && [self currentDateIsBeforeShutdown:shutdownDate]);
+-(BOOL)currentDateIsBetweenStartupAndShutdown {
+  return ([self currentDateIsAfterStartup] && [self currentDateIsBeforeShutdown]);
 }
 
--(BOOL)currentDateIsBeforeShutdown:(NSDate *)shutdownDate {
-  return ([[NSDate date] compare:shutdownDate] == NSOrderedAscending);
+-(BOOL)currentDateIsBeforeShutdown {
+  return ([[NSDate date] compare:shutdownTime] == NSOrderedAscending);
 }
 
--(BOOL)currentDateIsAfterStartup:(NSDate *)startupDate {
-  return ([[NSDate date] compare:startupDate] == NSOrderedDescending);
-}
-
--(BOOL)currentDateIsBeforeStartup:(NSDate *)startupDate {
-  return ![self currentDateIsAfterStartup:startupDate];
+-(BOOL)currentDateIsAfterStartup {
+  return ([[NSDate date] compare:startupTime] == NSOrderedDescending);
 }
 
 -(NSDictionary *)fullScreenOptions {
@@ -67,18 +54,66 @@
 
 
 -(void)enable {
+  [self invalidateTimers];
+
+  NSDateComponents *todayDate = [[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:[NSDate date]];
+  NSDateComponents *shutdownDateTimeComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:shutdownTime];
+  [shutdownDateTimeComponents setDay:[todayDate day]];
+  [shutdownDateTimeComponents setMonth:[todayDate month]];
+  [shutdownDateTimeComponents setYear:[todayDate year]];
+  [shutdownDateTimeComponents setCalendar:[NSCalendar currentCalendar]];
+
+  NSDate *shutdownDateTime = [shutdownDateTimeComponents date];
+
+  if([[shutdownDateTimeComponents date] timeIntervalSinceNow] < 0) {
+    [shutdownDateTimeComponents setDay:([shutdownDateTimeComponents day] + 1)];
+  }
+
+  shutdownTimer = [NSTimer scheduledTimerWithTimeInterval:[[shutdownDateTimeComponents date] timeIntervalSinceNow]
+                                                   target:self
+                                                 selector:@selector(disable)
+                                                 userInfo:nil
+                                                  repeats:NO];
+
+  NSLog(@"about to enable");
   if ([view isInFullScreenMode]) {
-    NSLog(@"about to enable");
-    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
-    [NSApp deactivate];
+//    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
+//    [NSApp deactivate];
   }
 }
 
 -(void)disable {
+  [self invalidateTimers];
+
+  NSDateComponents *todayDate = [[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:[NSDate date]];
+  NSDateComponents *startupDateTimeComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:startupTime];
+  [startupDateTimeComponents setDay:(NSUInteger)([todayDate day])]; // Startup tomorrow
+  [startupDateTimeComponents setMonth:[todayDate month]];
+  [startupDateTimeComponents setYear:[todayDate year]];
+  [startupDateTimeComponents setCalendar:[NSCalendar currentCalendar]];
+
+  if([[startupDateTimeComponents date] timeIntervalSinceNow] < 0) {
+    [startupDateTimeComponents setDay:([startupDateTimeComponents day] + 1)];
+  }
+  startupTimer = [NSTimer scheduledTimerWithTimeInterval:[[startupDateTimeComponents date] timeIntervalSinceNow]
+                                                   target:self
+                                                 selector:@selector(enable)
+                                                 userInfo:nil
+                                                  repeats:NO];
+
+  NSLog(@"about to disable");
   if (![view isInFullScreenMode]) {
-    NSLog(@"about to disable");
 //    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
 //    [NSApp activateIgnoringOtherApps:YES];
+  }
+}
+
+-(void)invalidateTimers {
+  if(startupTimer) {
+    [startupTimer invalidate];
+  }
+  if(shutdownTimer) {
+    [shutdownTimer invalidate];
   }
 }
 

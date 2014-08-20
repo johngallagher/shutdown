@@ -6,15 +6,22 @@
 
 @interface JGSystemDisabler : NSObject <JGTimerDelegate> {
   NSNumber *enabled;
+  NSView *view;
+
   NSTimer *startupTimer;
   NSTimer *shutdownTimer;
-  NSView *view;
+
+  NSDate *startupTime;
+  NSDate *shutdownTime;
+
+  NSDate *startupDate;
+  NSDate *shutdownDate;
 }
 
 @property(nonatomic, strong) NSNumber *enabled;
 
--(instancetype)initWithStartup:(NSDate *)startupDate shutdown:(NSDate *)shutdownDate disablerView:(NSView *)aView;
+-(instancetype)initWithStartupTime:(NSDate *)aStartupTime shutdownTime:(NSDate *)aShutdownTime disablerView:(NSView *)aView;
 
-+(instancetype)disablerWithStartup:(NSDate *)aStartup shutdown:(NSDate *)aShutdown disablerView:(NSView *)aView;
++(instancetype)disablerWithStartupTime:(NSDate *)aStartup shutdownTime:(NSDate *)aShutdown disablerView:(NSView *)aView;
 
 @end

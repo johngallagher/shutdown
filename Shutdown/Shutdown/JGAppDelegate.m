@@ -33,7 +33,7 @@
 
   if([self startup:startup isBeforeShutdown:shutdown]) {
     NSLog(@"Startup and shutdown times are good...");
-    state = [JGSystemDisabler disablerWithStartup:startup shutdown:shutdown disablerView:blockerView];
+    state = [JGSystemDisabler disablerWithStartupTime:startup shutdownTime:shutdown disablerView:blockerView];
   } else {
     NSLog(@"Startup and shutdown times are invalid");
   }
