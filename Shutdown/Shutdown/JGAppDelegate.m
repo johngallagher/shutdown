@@ -9,7 +9,7 @@
   [format setTimeStyle:NSDateFormatterShortStyle];
   [format setDateStyle:NSDateFormatterNoStyle];
 
-  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"8:00"], @"shutdown": [format dateFromString:@"22:00"]}];
+  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:00"], @"shutdown": [format dateFromString:@"22:00"]}];
 }
 
 
