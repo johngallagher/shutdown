@@ -9,7 +9,9 @@
   [format setTimeStyle:NSDateFormatterShortStyle];
   [format setDateStyle:NSDateFormatterNoStyle];
 
-  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:00"], @"shutdown": [format dateFromString:@"22:00"]}];
+  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:00"], @"shutdown": [format dateFromString:@"23:00"]}];
+  
+
 }
 
 
@@ -22,6 +24,11 @@
                                           forKeyPath:@"shutdown"
                                              options:NSKeyValueObservingOptionNew
                                              context:NULL];
+  statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+  [statusItem setMenu:menu];
+  [statusItem setAlternateImage:[NSImage imageNamed:NSImageNameLockLockedTemplate]];
+  [statusItem setImage:[NSImage imageNamed:NSImageNameLockLockedTemplate]];
+  [statusItem setHighlightMode:YES];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath

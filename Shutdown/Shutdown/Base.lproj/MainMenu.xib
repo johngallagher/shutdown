@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="blockerView" destination="eMh-tX-gGh" id="pJi-Y5-IIX"/>
                 <outlet property="defaultsController" destination="ENj-zG-K1l" id="kg5-1I-SOU"/>
+                <outlet property="menu" destination="R2v-Xz-v2y" id="iLc-b0-ILe"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -669,7 +670,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Shutdown" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Shutdown" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="314" height="95"/>
@@ -794,5 +795,23 @@
                 </textField>
             </subviews>
         </customView>
+        <menu id="R2v-Xz-v2y">
+            <items>
+                <menuItem title="Preferences..." id="y7V-KD-Sgw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="QvC-M9-y7g" id="jkJ-as-D5b"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TpP-NP-uds">
+            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSLockLockedTemplate" id="8G0-nE-KdD"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="NSLockLockedTemplate" width="9" height="12"/>
+    </resources>
 </document>
