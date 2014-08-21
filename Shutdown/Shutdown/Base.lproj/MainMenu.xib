@@ -673,7 +673,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="314" height="95"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="314" height="95"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -768,12 +768,12 @@
             </view>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="ENj-zG-K1l"/>
-        <customView id="eMh-tX-gGh">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+        <customView wantsLayer="YES" appearanceType="lightContent" id="eMh-tX-gGh">
+            <rect key="frame" x="0.0" y="0.0" width="599" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-yc-wYX">
-                    <rect key="frame" x="30" y="31" width="67" height="32"/>
+                    <rect key="frame" x="14" y="48" width="67" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9kQ-Lb-huA">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -783,6 +783,15 @@
                         <action selector="terminate:" target="-3" id="u3F-lJ-gBd"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ih-j1-5F4">
+                    <rect key="frame" x="207" y="40" width="184" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Time's up. Come back later." id="RnE-pI-TOa">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
         </customView>
     </objects>

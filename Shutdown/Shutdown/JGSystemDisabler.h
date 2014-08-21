@@ -1,10 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "JGTimerDelegate.h"
+#import "JGSystemDisablerDelegate.h"
 
-@class JGTimer;
 @protocol JGSystemShutdown;
 
-@interface JGSystemDisabler : NSObject <JGTimerDelegate> {
+@interface JGSystemDisabler : NSObject <JGSystemDisablerDelegate> {
   NSNumber *enabled;
   NSView *view;
 

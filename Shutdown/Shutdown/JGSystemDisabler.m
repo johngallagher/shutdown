@@ -18,10 +18,6 @@
     shutdownTime = aShutdownTime;
     startupTime = aStartupTime;
 
-    NSDateComponents *startupComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:aStartupTime];
-    NSDateComponents *shutdownComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:aShutdownTime];
-
-
     if([self currentDateIsBetweenStartupAndShutdown]) {
       [self enable];
     } else {
@@ -63,8 +59,6 @@
   [shutdownDateTimeComponents setYear:[todayDate year]];
   [shutdownDateTimeComponents setCalendar:[NSCalendar currentCalendar]];
 
-  NSDate *shutdownDateTime = [shutdownDateTimeComponents date];
-
   if([[shutdownDateTimeComponents date] timeIntervalSinceNow] < 0) {
     [shutdownDateTimeComponents setDay:([shutdownDateTimeComponents day] + 1)];
   }
@@ -77,8 +71,8 @@
 
   NSLog(@"about to enable");
   if ([view isInFullScreenMode]) {
-//    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
-//    [NSApp deactivate];
+    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
+    [NSApp deactivate];
   }
 }
 
@@ -102,9 +96,10 @@
                                                   repeats:NO];
 
   NSLog(@"about to disable");
+
   if (![view isInFullScreenMode]) {
-//    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
-//    [NSApp activateIgnoringOtherApps:YES];
+    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
+    [NSApp activateIgnoringOtherApps:YES];
   }
 }
 
