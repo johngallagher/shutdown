@@ -9,11 +9,9 @@
   [format setTimeStyle:NSDateFormatterShortStyle];
   [format setDateStyle:NSDateFormatterNoStyle];
 
-  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:00"], @"shutdown": [format dateFromString:@"23:00"]}];
-  
-
+  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:00"], @"shutdown": [format dateFromString:@"23:30"]}];
+  [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
 }
-
 
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   [[NSUserDefaults standardUserDefaults] addObserver:self
