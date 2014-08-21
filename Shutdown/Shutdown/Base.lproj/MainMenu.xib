@@ -789,7 +789,7 @@
                 <menuItem title="Preferences..." id="y7V-KD-Sgw">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="makeKeyAndOrderFront:" target="QvC-M9-y7g" id="jkJ-as-D5b"/>
+                        <action selector="showPreferencesWindow:" target="Voe-Tx-rLC" id="Kd5-QW-hLB"/>
                     </connections>
                 </menuItem>
             </items>

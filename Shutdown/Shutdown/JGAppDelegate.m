@@ -29,6 +29,12 @@
   [statusItem setHighlightMode:YES];
 }
 
+-(IBAction)showPreferencesWindow:(id)sender {
+  [NSApp activateIgnoringOtherApps:YES];
+  [[self window] makeKeyAndOrderFront:self];
+}
+
+
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change
