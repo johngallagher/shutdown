@@ -42,13 +42,8 @@
 }
 
 -(NSDictionary *)fullScreenOptions {
-  return @{NSFullScreenModeAllScreens : @NO};
-  // Additional options
-  //                                       [NSNumber numberWithInt:1],      NSFullScreenModeApplicationPresentationOptions,
-  //                                       [NSNumber numberWithInt:2],      NSFullScreenModeWindowLevel,
+  return @{NSFullScreenModeAllScreens : @YES};
 }
-
-
 
 -(void)enable {
   [self invalidateTimers];
@@ -61,8 +56,9 @@
 
   NSLog(@"about to enable");
   if ([view isInFullScreenMode]) {
-    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
+    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
     [NSApp deactivate];
+    [view exitFullScreenModeWithOptions:[self fullScreenOptions]];
   }
 }
 
@@ -107,8 +103,9 @@
   NSLog(@"about to disable");
 
   if (![view isInFullScreenMode]) {
-    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
+    [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
     [NSApp activateIgnoringOtherApps:YES];
+    [view enterFullScreenMode:[NSScreen mainScreen] withOptions:[self fullScreenOptions]];
   }
 }
 
