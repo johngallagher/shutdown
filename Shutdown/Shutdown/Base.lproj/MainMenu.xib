@@ -673,14 +673,14 @@
         <window title="Shutdown" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="314" height="95"/>
+            <rect key="contentRect" x="335" y="390" width="314" height="139"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="314" height="95"/>
+                <rect key="frame" x="0.0" y="0.0" width="314" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" id="gT3-hc-WQa">
-                        <rect key="frame" x="111" y="53" width="61" height="22"/>
+                        <rect key="frame" x="111" y="97" width="61" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10:00" drawsBackground="YES" id="g3h-XH-qWX">
                             <dateFormatter key="formatter" timeStyle="short" id="c75-75-T98"/>
@@ -689,7 +689,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="ENj-zG-K1l" name="value" keyPath="values.startup" id="SDN-1V-e4u">
+                            <binding destination="ROU-0P-EFr" name="value" keyPath="startupDate" id="LYd-kf-OBq">
                                 <dictionary key="options">
                                     <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
                                 </dictionary>
@@ -697,7 +697,7 @@
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" id="jYV-4r-a4A">
-                        <rect key="frame" x="201" y="53" width="61" height="22"/>
+                        <rect key="frame" x="201" y="97" width="61" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="19:00" drawsBackground="YES" id="w85-HQ-2Sk">
                             <dateFormatter key="formatter" timeStyle="short" id="isI-SH-0ml"/>
@@ -706,7 +706,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <binding destination="ENj-zG-K1l" name="value" keyPath="values.shutdown" id="AcE-dX-eqp">
+                            <binding destination="ROU-0P-EFr" name="value" keyPath="shutdownDate" id="vrD-EH-n5A">
                                 <dictionary key="options">
                                     <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
                                 </dictionary>
@@ -714,7 +714,7 @@
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" id="IdD-Dk-4VV">
-                        <rect key="frame" x="19" y="55" width="78" height="17"/>
+                        <rect key="frame" x="19" y="99" width="78" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Valid Times" id="HQZ-e4-KGc">
                             <font key="font" metaFont="system"/>
@@ -723,7 +723,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="RJW-gT-nja">
-                        <rect key="frame" x="180" y="55" width="29" height="17"/>
+                        <rect key="frame" x="180" y="99" width="29" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="to" id="Ldm-mL-fTw">
                             <font key="font" metaFont="system"/>
@@ -732,7 +732,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="EqS-lw-X5D">
-                        <rect key="frame" x="18" y="21" width="78" height="17"/>
+                        <rect key="frame" x="18" y="65" width="78" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Warn" id="AgR-Kz-MQB">
                             <font key="font" metaFont="system"/>
@@ -741,7 +741,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="whu-2e-Hie">
-                        <rect key="frame" x="167" y="21" width="129" height="17"/>
+                        <rect key="frame" x="167" y="65" width="129" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="minutes before quit" id="bae-kG-Gn0">
                             <font key="font" metaFont="system"/>
@@ -750,7 +750,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="uRO-ve-YSX">
-                        <rect key="frame" x="111" y="18" width="50" height="22"/>
+                        <rect key="frame" x="111" y="62" width="50" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10" drawsBackground="YES" id="3cz-dg-Atl">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="gmz-Pz-EZb">
@@ -765,6 +765,38 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" id="fv9-Qu-W9a">
+                        <rect key="frame" x="224" y="13" width="76" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w7y-ud-g7n">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="update:" target="ROU-0P-EFr" id="IJq-pM-2as"/>
+                            <binding destination="ROU-0P-EFr" name="enabled" keyPath="timesAreValid" id="Uit-vm-ktc"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="YGk-gn-euf">
+                        <rect key="frame" x="65" y="23" width="111" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Times are invalid" id="uC1-Rg-Div">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="ROU-0P-EFr" name="hidden" keyPath="timesAreValid" id="tFS-kT-qYb"/>
+                        </connections>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bOU-Re-8HK">
+                        <rect key="frame" x="38" y="21" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSCaution" id="usL-ia-4Fo"/>
+                        <connections>
+                            <binding destination="ROU-0P-EFr" name="hidden" keyPath="timesAreValid" id="pCp-ab-S8e"/>
+                        </connections>
+                    </imageView>
                 </subviews>
             </view>
         </window>
@@ -784,6 +816,7 @@
                 </textField>
             </subviews>
         </customView>
+        <customObject id="ROU-0P-EFr" customClass="JGUserDefaultsUpdater"/>
         <menu id="R2v-Xz-v2y">
             <items>
                 <menuItem title="Preferences..." id="y7V-KD-Sgw">
@@ -801,6 +834,7 @@
         </imageView>
     </objects>
     <resources>
+        <image name="NSCaution" width="32" height="32"/>
         <image name="NSLockLockedTemplate" width="9" height="12"/>
     </resources>
 </document>
