@@ -48,7 +48,7 @@
   [format setTimeStyle:NSDateFormatterShortStyle];
   [format setDateStyle:NSDateFormatterNoStyle];
 
-  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:45"], @"shutdown": [format dateFromString:@"21:00"]}];
+  [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"startup": [format dateFromString:@"7:45"], @"shutdown": [format dateFromString:@"22:00"]}];
 }
 
 -(void)watchForWakeFromSleep {

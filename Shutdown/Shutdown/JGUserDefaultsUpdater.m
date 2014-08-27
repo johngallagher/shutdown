@@ -4,16 +4,27 @@
 @implementation JGUserDefaultsUpdater
 
 -(id)init {
+  self = [self initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
+  return self;
+}
+
+-(instancetype)initWithUserDefaults:(NSUserDefaults *)anUserDefaults {
   self = [super init];
   if (self) {
-    [self addObserver:self forKeyPath:@"startupDate" options:NSKeyValueObservingOptionNew context:NULL];
+    userDefaults = anUserDefaults;
+    [self setStartupDate:[userDefaults objectForKey:@"startup"]];
+    [self setShutdownDate:[userDefaults objectForKey:@"shutdown"]];
+    [self addObserver:self forKeyPath:@"startupDate" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:NULL];
     [self addObserver:self forKeyPath:@"shutdownDate" options:NSKeyValueObservingOptionNew context:NULL];
-    [self updateFromDefaults];
-    [self updateTimesAreValid];
   }
 
   return self;
 }
+
++(instancetype)updaterWithUserDefaults:(NSUserDefaults *)anUserDefaults {
+  return [[self alloc] initWithUserDefaults:anUserDefaults];
+}
+
 
 -(IBAction)update:(id)sender {
   if([self timesAreValid]) {
@@ -22,18 +33,9 @@
   }
 }
 
--(void)updateTimesAreValid {
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
   BOOL startupIsBeforeShutdown = ([[self startupDate] compare:[self shutdownDate]] == NSOrderedAscending);
   [self setTimesAreValid:startupIsBeforeShutdown];
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  [self updateTimesAreValid];
-}
-
--(void)updateFromDefaults {
-  [self setStartupDate:[[NSUserDefaults standardUserDefaults] objectForKey:@"startup"]];
-  [self setShutdownDate:[[NSUserDefaults standardUserDefaults] objectForKey:@"shutdown"]];
 }
 
 -(void)dealloc {

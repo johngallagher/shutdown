@@ -18,8 +18,8 @@
 		67EDF45519674C2F0002806E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EDF43419674C2F0002806E /* Cocoa.framework */; };
 		67EDF45D19674C300002806E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67EDF45B19674C300002806E /* InfoPlist.strings */; };
 		75B78C3B2036400EAE2A0703 /* libPods-Shutdown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */; };
-		9F8CF14991D0427E78A677C3 /* JGSystemStateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */; };
 		9F8CF71EF3A3141CE07C50A1 /* JGSystemDisabler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */; };
+		9F8CFAA50D8AF414202FCCE1 /* JGUserDefaultsUpdaterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF7A8317A2EA65615A414 /* JGUserDefaultsUpdaterTestCase.m */; };
 		9F8CFCF24791C3A6748D7B90 /* JGUserDefaultsUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CF139AA8AC1C528434672 /* JGUserDefaultsUpdater.m */; };
 		F7ACD84E616A41739410F7B5 /* libPods-ShutdownTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9550CB311E74B1286915E2F /* libPods-ShutdownTests.a */; };
 /* End PBXBuildFile section */
@@ -59,9 +59,9 @@
 		9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemDisabler.m; sourceTree = "<group>"; };
 		9F8CF579FD45A2209E44AD6E /* JGSystemShutdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSystemShutdown.h; sourceTree = "<group>"; };
 		9F8CF7955909716087863033 /* JGSystemDisablerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGSystemDisablerDelegate.h; path = Shutdown/JGSystemDisablerDelegate.h; sourceTree = SOURCE_ROOT; };
+		9F8CF7A8317A2EA65615A414 /* JGUserDefaultsUpdaterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGUserDefaultsUpdaterTestCase.m; sourceTree = "<group>"; };
 		9F8CF85F11F9002C7633A901 /* JGUserDefaultsUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGUserDefaultsUpdater.h; sourceTree = "<group>"; };
 		9F8CF9BFA14024D3F1A76CD1 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = Notes.md; path = Shutdown/Notes.md; sourceTree = "<group>"; };
-		9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSystemStateTest.m; sourceTree = "<group>"; };
 		A6B1E735C92C4AD4A54D7C80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF137FF7DDC4B138A5CAD79 /* libPods-Shutdown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shutdown.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37B1C50614A4595A0162E79 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 				67EDF43B19674C2F0002806E /* Supporting Files */,
 				9F8CF572522D84FB8F3DC5C7 /* JGSystemDisabler.m */,
 				9F8CF1EF8E37C1DE1726D6B3 /* JGSystemDisabler.h */,
-				9F8CFABBB2BD8304F6FE0A39 /* JGSystemStateTest.m */,
 				9F8CF579FD45A2209E44AD6E /* JGSystemShutdown.h */,
 				9F8CF139AA8AC1C528434672 /* JGUserDefaultsUpdater.m */,
 				9F8CF85F11F9002C7633A901 /* JGUserDefaultsUpdater.h */,
+				9F8CF7A8317A2EA65615A414 /* JGUserDefaultsUpdaterTestCase.m */,
 			);
 			path = Shutdown;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8CF14991D0427E78A677C3 /* JGSystemStateTest.m in Sources */,
+				9F8CFAA50D8AF414202FCCE1 /* JGUserDefaultsUpdaterTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
